@@ -52,7 +52,7 @@ RUN wget "https://travis-bin.yihui.name/texlive-local.deb" \
    ## And some nice R packages for publishing-related stuff
   && install2.r --error --deps TRUE \
     bookdown rticles rmdshower
-
+  && R -e "devtools::install_github('slucey/RpathDev/Rpath', ref = 'Public', build_vignettes = FALSE)"
 ## Consider including:
 # - yihui/printr R package (when released to CRAN)
 # - libgsl0-dev (GSL math library dependencies)
